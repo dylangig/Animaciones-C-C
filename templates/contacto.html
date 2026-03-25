@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+
+{% block contenido %}
+
+<div class="formulario">
+    <h2>Contactanos</h2>
+    <p>Completá el formulario y te respondemos a la brevedad.</p>
+    
+    <input type="text" id="nombre" placeholder="Tu nombre" />
+    <input type="text" id="telefono" placeholder="Tu teléfono" />
+    <textarea id="consulta" rows="5" placeholder="Tu consulta"></textarea>
+    
+    <button onclick="enviarWhatsApp()">Enviar consulta</button>
+</div>
+
+<script>
+function enviarWhatsApp() {
+    var nombre = document.getElementById("nombre").value;
+    var telefono = document.getElementById("telefono").value;
+    var consulta = document.getElementById("consulta").value;
+    
+    var mensaje = "Hola! Mi nombre es " + nombre + 
+                  ", mi teléfono es " + telefono + 
+                  ". Mi consulta es: " + consulta;
+    
+    var url = "https://wa.me/5491125539044?text=" + encodeURIComponent(mensaje);
+    
+    window.open(url);
+}
+</script>
+
+{% endblock %}

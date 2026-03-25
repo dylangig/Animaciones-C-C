@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Animaciones C&C</title>
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                background-color: #f9f0ff;
+                margin: 0;
+                padding: 0;
+                text-align: center;
+            }
+            h1 {
+                background-color: #9b59b6;
+                color: white;
+                padding: 20px;
+                margin: 0;
+            }
+            nav { 
+                background-color: #7d3c98;
+                padding: 10px;
+            }
+            nav a {
+                color: white;
+                text-decoration: none;
+                margin: 0 15px;
+                font-size: 16px;
+            }
+            nav a:hover {
+                text-decoration: underline;
+            }
+            .galeria {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 10px;
+                margin: 30px auto;
+                width: 80%;
+            }
+            img {
+                width: 250px;
+                height: 200px;
+                object-fit: cover;
+                border-radius: 10px;
+            }
+            .bienvenida {
+                margin: 30px auto;
+                width: 60%;
+            }
+            a {
+                display: inline-block;
+                margin-top: 20px;
+                padding: 12px 24px;
+                background-color: #9b59b6;
+                color: white;
+                text-decoration: none;
+                border-radius: 8px;
+            }
+            .servicio {
+                background-color: white;
+                margin: 20px auto;
+                padding: 20px;
+                width: 60%;
+                border-radius: 10px;
+                box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+                text-align: left;
+            }
+            .formulario {
+                background-color: white;
+                margin: 40px auto;
+                padding: 30px;
+                width: 50%;
+                border-radius: 10px;
+                box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+                text-align: left;
+            }
+            input, textarea {
+                width: 100%;
+                padding: 10px;
+                margin: 10px 0;
+                border: 1px solid #ccc;
+                border-radius: 6px;
+                box-sizing: border-box;
+            }
+            button {
+                background-color: #9b59b6;
+                color: white;
+                padding: 12px 24px;
+                border: none;
+                border-radius: 8px;
+                cursor: pointer;
+            }                   
+        </style>
+    </head>
+    <body>
+        <h1>Animaciones C&C ⭐</h1>
+        <nav>
+            <a href="/">Inicio</a>
+            <a href="/servicios">Servicios</a>
+            <a href="/contacto">Contacto</a>
+        </nav>
+
+        {% block contenido %} {% endblock %}
+    </body>
+</html>

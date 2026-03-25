@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block contenido %}
+
+<div class="galeria">
+    {% for foto in fotos %}
+        <img src="{{ url_for('static', filename='imagenes/' + foto) }}" />
+    {% endfor %}
+</div>
+
+<div class="bienvenida">
+    <h2>¡Bienvenidos!</h2>
+    <p>Somos especialistas en animaciones infantiles y stand de glitter.</p>
+    <a href="/servicios">Ver nuestros servicios</a>
+</div>
+
+{% endblock %}
