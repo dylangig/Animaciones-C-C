@@ -13,7 +13,7 @@ servicios = [
      "descripcion": "Dos horas de animación, la cual te incluye juegos de destreza, habilidad y competencia acorde a la edad del grupo, maquillaje artístico para todos los nenes, también glitter y maquina de burbujas. En esta opcion, si querés te ayudo  a organizar el momento de la torta y piñata, tambien servirle a los nenes la comida y gaseosa que tengas, eso depende de cada familia, llevo disfraz de panchero." }
     ]
 
-fotos = ["1.jpg", "2.jpg", "3.jpg", "4.jpg", "5.jpg", "6.jpg", "7.jpg"]
+fotos = ["1.jpg", "2.jpg", "3.jpg", "4.jpg", "5.jpg", "6.jpg", "7.jpg","8.jpg","9.jpg"]
 
 @app.route("/contacto")
 def contacto():
