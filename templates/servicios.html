@@ -2,13 +2,59 @@
 
 {% block contenido %}
 
-{% for servicio in servicios %}
-    <div class="servicio">
-        <h2>{{ servicio.nombre }}</h2>
-        <p>💰 Precio por hora: {{ servicio.Precio }}</p>
-        <p>🚗 Viático: {{ servicio.Viatico }}</p>
-        <p>{{ servicio.descripcion }}</p>
-    </div>
-{% endfor %}
+<h2 style="text-align: center; margin-bottom: 30px;">Nuestros Servicios ✨</h2>
+
+<div class="servicios-grid">
+    {% for servicio in servicios %}
+        <div class="servicio-card">
+            <h3>{{ servicio.nombre }}</h3>
+            <p class="precio">💰 {{ servicio.Precio }} <span>/ hora</span></p>
+            <p class="viatico">🚗 Viático: {{ servicio.Viatico }}</p>
+            <p class="descripcion">{{ servicio.descripcion }}</p>
+        </div>
+    {% endfor %}
+</div>
+
+<style>
+    .servicios-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 25px;
+    }
+    .servicio-card {
+        background: white;
+        border-radius: 15px;
+        padding: 25px;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+        border-top: 4px solid #f48fb1;
+    }
+    .servicio-card h3 {
+        color: #e91e8c;
+        font-size: 20px;
+        margin-bottom: 10px;
+    }
+    .precio {
+        font-size: 22px;
+        font-weight: 700;
+        color: #333;
+        margin: 10px 0;
+    }
+    .precio span {
+        font-size: 14px;
+        color: #999;
+    }
+    .viatico {
+        color: #666;
+        margin-bottom: 10px;
+    }
+    .descripcion {
+        color: #555;
+        font-size: 14px;
+        line-height: 1.6;
+        border-top: 1px solid #f0f0f0;
+        padding-top: 10px;
+        margin-top: 10px;
+    }
+</style>
 
 {% endblock %}

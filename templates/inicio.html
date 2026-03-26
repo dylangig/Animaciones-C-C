@@ -2,16 +2,45 @@
 
 {% block contenido %}
 
+<div style="text-align: center; margin-bottom: 40px;">
+    <h2>¡Bienvenidos! ✨</h2>
+    <p style="font-size: 18px; color: #666; margin-top: 10px;">
+        Somos especialistas en animaciones infantiles y stand de glitter.<br>
+        ¡Hacemos que tu fiesta sea inolvidable!
+    </p>
+    <a href="/servicios" class="btn">Ver nuestros servicios</a>
+</div>
+
 <div class="galeria">
     {% for foto in fotos %}
-        <img src="{{ url_for('static', filename='imagenes/' + foto) }}" />
+        <div class="foto-card">
+            <img src="{{ url_for('static', filename='imagenes/' + foto) }}" />
+        </div>
     {% endfor %}
 </div>
 
-<div class="bienvenida">
-    <h2>¡Bienvenidos!</h2>
-    <p>Somos especialistas en animaciones infantiles y stand de glitter.</p>
-    <a href="/servicios">Ver nuestros servicios</a>
-</div>
+<style>
+    .galeria {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 15px;
+        margin-top: 20px;
+    }
+    .foto-card {
+        overflow: hidden;
+        border-radius: 15px;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+    .foto-card img {
+        width: 100%;
+        height: 250px;
+        object-fit: cover;
+        display: block;
+        transition: transform 0.3s;
+    }
+    .foto-card img:hover {
+        transform: scale(1.05);
+    }
+</style>
 
 {% endblock %}
