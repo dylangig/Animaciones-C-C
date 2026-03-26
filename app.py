@@ -3,13 +3,21 @@ from flask import Flask, render_template, request
 app = Flask(__name__)
 
 servicios = [
-    {"nombre": "Stand de Glitter y Maquillaje Artisstico",
-     "descripcion": "Nuestro Stand de Glitter ofrece una experiencia completa de brillo y color con glitter en polvo o gel, gemas, strass, piedras y polvo de hadas en variados colores, texturas y tamaños. Incluye pelos locos con pintura de brillo, maquillaje artístico para niños y adultos, y tatuajes personalizados. Todos nuestros productos son hipoalergénicos y el servicio viene equipado con banner, cartel y espejo hollywood." },
-    {"nombre": "Animacion Infantil 1, 2 y 3 horas", 
-     "descripcion": "incluye juegos de destreza, habilidad y competencia acorde a la edad del grupo, maquillaje artístico para todos los nenes, también glitter y maquina de burbujas. En esta opcion, si querés te ayudo  a organizar el momento de la torta y piñata, tambien servirle a los nenes la comida y gaseosa que tengas, eso depende de cada familia, llevo disfraz de panchero." },
-    {"nombre": "Fotografía Profesional",
-     "descripcion": "Servicio de fotografía Profesional. Fotos ilimitadas, todas editadas en alta calidad y entregadas en formato digital por Google Drive."},
-
+    {
+        "nombre": "Stand de Glitter y Maquillaje Artístico",
+        "descripcion": "Nuestro Stand de Glitter ofrece una experiencia completa de brillo y color con glitter en polvo o gel, gemas, strass, piedras y polvo de hadas en variados colores, texturas y tamaños. Incluye pelos locos con pintura de brillo, maquillaje artístico para niños y adultos, y tatuajes personalizados. Todos nuestros productos son hipoalergénicos y el servicio viene equipado con banner, cartel y espejo hollywood.",
+        "fotos": ["Glitter1.jpg", "Glitter2.jpg", "Glitter3.jpg"]
+    },
+    {
+        "nombre": "Animación Infantil",
+        "descripcion": "Incluye juegos de destreza, habilidad y competencia acorde a la edad del grupo, maquillaje artístico para todos los nenes, también glitter y máquina de burbujas. Te ayudamos a organizar el momento de la torta y piñata, también a servirle a los nenes la comida y gaseosa. Incluye disfraz de panchero.",
+        "fotos": ["Animacion1.jpg", "Animacion2.jpg"]
+    },
+    {
+        "nombre": "Fotografía Profesional",
+        "descripcion": "Fotos ilimitadas, todas editadas en alta calidad y entregadas en formato digital por Google Drive.de cancelación.",
+        "fotos": ["fotografia1.jpg", "fotografia2.jpg"]
+    }
     ]
 
 fotos = ["1.jpg", "2.jpg", "3.jpg", "4.jpg", "5.jpg", "6.jpg", "7.jpg","8.jpg","9.jpg"]
