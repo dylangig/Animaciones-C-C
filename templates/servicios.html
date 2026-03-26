@@ -24,6 +24,8 @@
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         gap: 25px;
+        max-width: 900px;
+        margin: 0 auto;
     }
     .servicio-card {
         background: white;
@@ -56,6 +58,11 @@
         font-size: 14px;
         line-height: 1.7;
         flex-grow: 1;
+    }
+    .servicios-grid .servicio-card:last-child:nth-child(odd) {
+        grid-column: 1 / -1;
+        max-width: 430px;
+        margin: 0 auto;
     }
 </style>
 
