@@ -2,6 +2,7 @@
 <html>
 <head>
     <title>Animaciones C&C</title>
+    <link rel="icon" type="image/png" href="{{ url_for('static', filename='imagenes/Logo.png') }}">
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600;700&display=swap" rel="stylesheet">
     <style>
         * {
@@ -66,16 +67,16 @@
         }
         footer {
             text-align: center;
-            padding: 20px;
+            padding: 30px 20px;
             background-color: #f48fb1;
             color: white;
             margin-top: 60px;
             font-size: 14px;
         }
-        .footer-redes {
+                .footer-redes {
             display: flex;
             justify-content: center;
-            gap: 20px;
+            gap: 30px;
             margin-bottom: 15px;
             flex-wrap: wrap;
         }
@@ -84,9 +85,19 @@
             text-decoration: none;
             font-weight: 600;
             font-size: 14px;
-            padding: 0;
+            display: flex;
+            align-items: center;
+            gap: 8px;
             background: none;
+            padding: 0;
             margin: 0;
+        }
+        .footer-redes a img {
+            width: 24px;
+            height: 24px;
+            border-radius: 0;
+            object-fit: contain;
+            filter: brightness(0) invert(1);
         }
         .footer-redes a:hover {
             text-decoration: underline;
@@ -110,12 +121,24 @@
 
     <footer>
     <div class="footer-redes">
-        <a href="https://instagram.com/animacionescyc" target="_blank">📸 Instagram Animaciones CyC</a>
-        <a href="https://wa.me/549TUNUMERO" target="_blank">💬 WhatsApp</a>
-        <a href="https://instagram.com/melinadiazfotografia" target="_blank">📸 Instagram Fotografía</a>
-        <a href="https://facebook.com/TUPAGINA" target="_blank">👥 Facebook</a>
+        <a href="https://instagram.com/animacionescyc" target="_blank">
+            <img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram" />
+            Instagram C&C
+        </a>
+        <a href="https://wa.me/5491125539044" target="_blank">
+            <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp" />
+            WhatsApp
+        </a>
+        <a href="https://instagram.com/melinadiazfotografia" target="_blank">
+            <img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram" />
+            Instagram Fotografía
+        </a>
+        <a href="https://facebook.com/animaciones.cecilia" target="_blank">
+            <img src="https://cdn-icons-png.flaticon.com/512/733/733547.png" alt="Facebook" />
+            Facebook
+        </a>
     </div>
     <p>© 2026 Animaciones C&C Todos los derechos reservados</p>
-</footer>
+    </footer>
 </body>
 </html>
