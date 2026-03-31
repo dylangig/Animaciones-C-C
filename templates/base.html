@@ -2,6 +2,7 @@
 <html>
 <head>
     <title>Animaciones C&C</title>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600;700&display=swap" rel="stylesheet">
     <style>
         * {
@@ -72,7 +73,7 @@
             margin-top: 60px;
             font-size: 14px;
         }
-                .footer-redes {
+        .footer-redes {
             display: flex;
             justify-content: center;
             gap: 30px;
@@ -104,6 +105,13 @@
     
 </head>
 <body>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+    AOS.init({
+        duration: 800,
+        once: true
+    });
+    </script>
     <header>
         <img src="{{ url_for('static', filename='imagenes/Logo.png') }}" alt="Logo Animaciones C&C" />
     </header>

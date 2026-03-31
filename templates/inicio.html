@@ -3,14 +3,14 @@
 {% block contenido %}
 
 <!-- Bienvenida -->
-<section class="hero">
+<section class="hero" data-aos="fade-up">
     <h2>¡Hacemos que tu fiesta sea inolvidable! ✨</h2>
     <p>Somos especialistas en animaciones infantiles, stand de glitter y fotografía profesional en Buenos Aires.</p>
     <a href="/contacto" class="btn">Consultanos ahora</a>
 </section>
 
-<!-- Sección Glitter -->
-<section class="seccion">
+<!-- Stand de Glitter -->
+<section class="seccion" data-aos="fade-up">
     <div class="seccion-fotos">
         <img src="{{ url_for('static', filename='imagenes/Glitter1.jpg') }}" />
         <img src="{{ url_for('static', filename='imagenes/Glitter2.jpg') }}" />
@@ -23,8 +23,8 @@
     </div>
 </section>
 
-<!-- Sección Animación -->
-<section class="seccion invertida">
+<!-- Animación -->
+<section class="seccion invertida" data-aos="fade-up">
     <div class="seccion-texto">
         <h3> Animación Infantil</h3>
         <p>Juegos de destreza, habilidad y competencia acorde a la edad del grupo. Incluye maquillaje artístico, glitter y máquina de burbujas.</p>
@@ -37,8 +37,8 @@
     </div>
 </section>
 
-<!-- Sección Fotografía -->
-<section class="seccion">
+<!--  Fotografía -->
+<section class="seccion" data-aos="fade-up">
     <div class="seccion-fotos">
         <img src="{{ url_for('static', filename='imagenes/fotografia1.jpg') }}" />
         <img src="{{ url_for('static', filename='imagenes/fotografia2.jpg') }}" />
@@ -52,7 +52,7 @@
 </section>
 
 <!-- Galería -->
-<section class="galeria-seccion">
+<section class="galeria-seccion" data-aos="fade-up">
     <h3>📷 Nuestros trabajos</h3>
     <div class="galeria">
         {% for foto in fotos %}
