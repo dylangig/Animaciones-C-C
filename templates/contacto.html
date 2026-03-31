@@ -73,26 +73,28 @@
 
 <script>
 function enviarWhatsApp() {
-    var nombre = document.getElementById("nombre").value;
-    var telefono = document.getElementById("telefono").value;
-    var consulta = document.getElementById("consulta").value;
-    
-    if (!nombre || !telefono || !consulta) {
-        alert("Por favor completá todos los campos antes de enviar.");
-        return;}
-    var recaptcha = grecaptcha.getResponse();
-    if (!recaptcha) {
-        alert("Por favor confirmá que no sos un robot.");
+    var nombre = document.getElementById("nombre").value.trim();
+    var telefono = document.getElementById("telefono").value.trim();
+    var consulta = document.getElementById("consulta").value.trim();
+
+    if (nombre === "" || telefono === "" || consulta === "") {
+        alert("Por favor completá todos los campos 📝");
         return;
-    var nombre = document.getElementById("nombre").value;
-    var telefono = document.getElementById("telefono").value;
-    var consulta = document.getElementById("consulta").value;
+    }
+
+    var recaptcha = grecaptcha.getResponse();
+    if (recaptcha === "") {
+        alert("Por favor confirmá que no sos un robot ✅");
+        return;
+    }
+
     var mensaje = "Hola! Mi nombre es " + nombre +
                   ", mi teléfono es " + telefono +
                   ". Mi consulta es: " + consulta;
-    var url = "https://wa.me/5491125539044?text=" + encodeURIComponent(mensaje);
+
+    var url = "https://wa.me/549TUNUMERO?text=" + encodeURIComponent(mensaje);
     window.open(url);
-} }
+}
 </script>
 
 <script src="https://www.google.com/recaptcha/api.js" async defer></script>
