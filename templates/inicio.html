@@ -2,29 +2,161 @@
 
 {% block contenido %}
 
-<div style="text-align: center; margin-bottom: 40px;">
-    <h2>¡Bienvenidos! ✨</h2>
-    <p style="font-size: 18px; color: #666; margin-top: 10px;">
-        Somos especialistas en animaciones infantiles y stand de glitter.<br>
-        ¡Hacemos que tu fiesta sea inolvidable!
-    </p>
-    <a href="/servicios" class="btn">Ver nuestros servicios</a>
-</div>
+<!-- Bienvenida -->
+<section class="hero">
+    <h2>¡Hacemos que tu fiesta sea inolvidable! ✨</h2>
+    <p>Somos especialistas en animaciones infantiles, stand de glitter y fotografía profesional en Buenos Aires.</p>
+    <a href="/contacto" class="btn">Consultanos ahora</a>
+</section>
 
-<div class="galeria">
-    {% for foto in fotos %}
-        <div class="foto-card">
-            <img src="{{ url_for('static', filename='imagenes/' + foto) }}" />
-        </div>
-    {% endfor %}
-</div>
+<!-- Sección Glitter -->
+<section class="seccion">
+    <div class="seccion-fotos">
+        <img src="{{ url_for('static', filename='imagenes/Glitter1.jpg') }}" />
+        <img src="{{ url_for('static', filename='imagenes/Glitter2.jpg') }}" />
+    </div>
+    <div class="seccion-texto">
+        <h3>✨ Stand de Glitter y Maquillaje</h3>
+        <p>Ofrecemos una experiencia completa de brillo y color con glitter en polvo o gel, gemas, strass, piedras y polvo de hadas. Incluye maquillaje artístico para niños y adultos, tatuajes personalizados y pelos locos.</p>
+        <p>Todos nuestros productos son <strong>hipoalergénicos</strong>. El stand incluye banner, cartel y espejo hollywood.</p>
+        <a href="/contacto" class="btn-chico">Consultar precio →</a>
+    </div>
+</section>
+
+<!-- Sección Animación -->
+<section class="seccion invertida">
+    <div class="seccion-texto">
+        <h3>🎉 Animación Infantil</h3>
+        <p>Juegos de destreza, habilidad y competencia acorde a la edad del grupo. Incluye maquillaje artístico, glitter y máquina de burbujas.</p>
+        <p>También te ayudamos a organizar el momento de la torta y piñata. <strong>¡Llevamos disfraz de panchero!</strong></p>
+        <a href="/contacto" class="btn-chico">Consultar precio →</a>
+    </div>
+    <div class="seccion-fotos">
+        <img src="{{ url_for('static', filename='imagenes/Animacion1.jpg') }}" />
+        <img src="{{ url_for('static', filename='imagenes/Animacion2.jpg') }}" />
+    </div>
+</section>
+
+<!-- Sección Fotografía -->
+<section class="seccion">
+    <div class="seccion-fotos">
+        <img src="{{ url_for('static', filename='imagenes/fotografia1.jpg') }}" />
+        <img src="{{ url_for('static', filename='imagenes/fotografia2.jpg') }}" />
+    </div>
+    <div class="seccion-texto">
+        <h3>📸 Fotografía Profesional</h3>
+        <p>Fotos ilimitadas durante toda la fiesta, editadas en alta calidad y entregadas en formato digital por Google Drive.</p>
+        <p>Podés ver los trabajos en <strong>@melinadiazfotografia</strong> en Instagram.</p>
+        <a href="/contacto" class="btn-chico">Consultar precio →</a>
+    </div>
+</section>
+
+<!-- Galería -->
+<section class="galeria-seccion">
+    <h3>📷 Nuestros trabajos</h3>
+    <div class="galeria">
+        {% for foto in fotos %}
+            <div class="foto-card">
+                <img src="{{ url_for('static', filename='imagenes/' + foto) }}" />
+            </div>
+        {% endfor %}
+    </div>
+</section>
 
 <style>
+    /* Hero */
+    .hero {
+        text-align: center;
+        padding: 60px 20px;
+        background: linear-gradient(135deg, #fce4ec, #fff5f9);
+        border-radius: 20px;
+        margin-bottom: 60px;
+    }
+    .hero h2 {
+        font-size: 32px;
+        color: #e91e8c;
+        margin-bottom: 15px;
+    }
+    .hero p {
+        font-size: 18px;
+        color: #666;
+        margin-bottom: 25px;
+        max-width: 600px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    /* Secciones alternadas */
+    .seccion {
+        display: flex;
+        align-items: center;
+        gap: 50px;
+        margin-bottom: 80px;
+    }
+    .seccion.invertida {
+        flex-direction: row-reverse;
+    }
+    .seccion-fotos {
+        flex: 1;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+    }
+    .seccion-fotos img {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+        border-radius: 15px;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        transition: transform 0.3s;
+    }
+    .seccion-fotos img:hover {
+        transform: scale(1.03);
+    }
+    .seccion-texto {
+        flex: 1;
+    }
+    .seccion-texto h3 {
+        font-size: 26px;
+        color: #e91e8c;
+        margin-bottom: 15px;
+    }
+    .seccion-texto p {
+        color: #555;
+        font-size: 16px;
+        line-height: 1.8;
+        margin-bottom: 12px;
+    }
+    .btn-chico {
+        display: inline-block;
+        margin-top: 10px;
+        padding: 10px 22px;
+        background-color: #f48fb1;
+        color: white;
+        text-decoration: none;
+        border-radius: 25px;
+        font-weight: 600;
+        font-size: 14px;
+        transition: background-color 0.3s;
+    }
+    .btn-chico:hover {
+        background-color: #e91e8c;
+    }
+
+    /* Galería */
+    .galeria-seccion {
+        text-align: center;
+        margin-top: 40px;
+    }
+    .galeria-seccion h3 {
+        font-size: 24px;
+        color: #e91e8c;
+        margin-bottom: 25px;
+    }
     .galeria {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         gap: 15px;
-        margin-top: 20px;
     }
     .foto-card {
         overflow: hidden;
