@@ -4,19 +4,18 @@
 
 <!-- Bienvenida -->
 <section class="hero" data-aos="fade-up">
-    <h2>¡Hacemos que tu fiesta sea inolvidable! ✨</h2>
+    <h2>¡Hacemos que tu fiesta sea inolvidable!</h2>
     <p>Somos especialistas en animaciones infantiles, stand de glitter y fotografía profesional en Buenos Aires.</p>
     <a href="/contacto" class="btn">Consultanos ahora</a>
 </section>
 
 <!-- Stand de Glitter -->
-<section class="seccion" data-aos="fade-up">
-    <div class="seccion-fotos">
+<section class="seccion" data-aos="fade-right">
+    <div class="seccion-foto-grande">
         <img src="{{ url_for('static', filename='imagenes/Glitter1.jpg') }}" />
-        <img src="{{ url_for('static', filename='imagenes/Glitter2.jpg') }}" />
     </div>
     <div class="seccion-texto">
-        <h3> Stand de Glitter y Maquillaje</h3>
+        <h3>Stand de Glitter y Maquillaje</h3>
         <p>Ofrecemos una experiencia completa de brillo y color con glitter en polvo o gel, gemas, strass, piedras y polvo de hadas. Incluye maquillaje artístico para niños y adultos, tatuajes personalizados y pelos locos.</p>
         <p>Todos nuestros productos son <strong>hipoalergénicos</strong>. El stand incluye banner, cartel y espejo hollywood.</p>
         <a href="/contacto" class="btn-chico">Consultar precio →</a>
@@ -24,27 +23,25 @@
 </section>
 
 <!-- Animación -->
-<section class="seccion invertida" data-aos="fade-up">
+<section class="seccion invertida" data-aos="fade-left">
     <div class="seccion-texto">
-        <h3> Animación Infantil</h3>
+        <h3>Animación Infantil</h3>
         <p>Juegos de destreza, habilidad y competencia acorde a la edad del grupo. Incluye maquillaje artístico, glitter y máquina de burbujas.</p>
         <p>También te ayudamos a organizar el momento de la torta y piñata. <strong>¡Llevamos disfraz de panchero!</strong></p>
         <a href="/contacto" class="btn-chico">Consultar precio →</a>
     </div>
-    <div class="seccion-fotos">
+    <div class="seccion-foto-grande">
         <img src="{{ url_for('static', filename='imagenes/Animacion1.jpg') }}" />
-        <img src="{{ url_for('static', filename='imagenes/Animacion2.jpg') }}" />
     </div>
 </section>
 
 <!--  Fotografía -->
-<section class="seccion" data-aos="fade-up">
-    <div class="seccion-fotos">
+<section class="seccion" data-aos="fade-right">
+    <div class="seccion-foto-grande">
         <img src="{{ url_for('static', filename='imagenes/fotografia1.jpg') }}" />
-        <img src="{{ url_for('static', filename='imagenes/fotografia2.jpg') }}" />
     </div>
     <div class="seccion-texto">
-        <h3> Fotografía Profesional</h3>
+        <h3>Fotografía Profesional</h3>
         <p>Fotos ilimitadas durante toda la fiesta, editadas en alta calidad y entregadas en formato digital por Google Drive.</p>
         <p>Podés ver los trabajos en <strong>@melinadiazfotografia</strong> en Instagram.</p>
         <a href="/contacto" class="btn-chico">Consultar precio →</a>
@@ -88,44 +85,41 @@
 
     /* Secciones alternadas */
     .seccion {
-        display: flex;
-        align-items: center;
-        gap: 50px;
-        margin-bottom: 80px;
+    display: flex;
+    align-items: center;
+    gap: 80px;
+    margin-bottom: 100px;
     }
     .seccion.invertida {
         flex-direction: row-reverse;
     }
-    .seccion-fotos {
+    .seccion-foto-grande {
         flex: 1;
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 10px;
     }
-    .seccion-fotos img {
+    .seccion-foto-grande img {
         width: 100%;
-        height: 200px;
+        height: 380px;
         object-fit: cover;
-        border-radius: 15px;
-        box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        border-radius: 20px;
+        box-shadow: 0 8px 24px rgba(0,0,0,0.12);
         transition: transform 0.3s;
     }
-    .seccion-fotos img:hover {
-        transform: scale(1.03);
+    .seccion-foto-grande img:hover {
+        transform: scale(1.02);
     }
     .seccion-texto {
         flex: 1;
     }
     .seccion-texto h3 {
-        font-size: 26px;
+        font-size: 28px;
         color: #e91e8c;
-        margin-bottom: 15px;
+        margin-bottom: 20px;
     }
     .seccion-texto p {
         color: #555;
-        font-size: 16px;
-        line-height: 1.8;
-        margin-bottom: 12px;
+        font-size: 17px;
+        line-height: 1.9;
+        margin-bottom: 15px;
     }
     .btn-chico {
         display: inline-block;
