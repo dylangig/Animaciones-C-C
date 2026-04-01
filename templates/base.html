@@ -76,31 +76,27 @@
         .footer-redes {
             display: flex;
             justify-content: center;
-            gap: 30px;
+            gap: 20px;
             margin-bottom: 15px;
-            flex-wrap: wrap;
         }
         .footer-redes a {
-            color: white;
-            text-decoration: none;
-            font-weight: 600;
-            font-size: 14px;
             display: flex;
             align-items: center;
-            gap: 8px;
-            background: none;
+            justify-content: center;
+            width: 44px;
+            height: 44px;
+            background-color: rgba(255,255,255,0.2);
+            border-radius: 50%;
+            transition: background-color 0.3s;
             padding: 0;
             margin: 0;
         }
-        .footer-redes a img {
-            width: 24px;
-            height: 24px;
-            border-radius: 0;
-            object-fit: contain;
-            filter: brightness(0) invert(1);
-        }
         .footer-redes a:hover {
-            text-decoration: underline;
+            background-color: rgba(255,255,255,0.4);
+        }
+        .footer-redes a svg {
+            width: 22px;
+            height: 22px;
         }
     </style>
     
