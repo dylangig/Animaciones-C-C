@@ -15,7 +15,7 @@
         <img src="{{ url_for('static', filename='imagenes/Glitter3.webp') }}" />
     </div>
     <div class="seccion-full-texto">
-        <h3>Stand de Glitter y Maquillaje</h3>
+        <h3>Stand de Glitter y Maquillaje artistico</h3>
         <p>Ofrecemos una experiencia completa de brillo y color con glitter en polvo o gel, gemas, strass, piedras y polvo de hadas. Incluye maquillaje artístico para niños y adultos, tatuajes personalizados y pelos locos.</p>
         <p>Todos nuestros productos son <strong>hipoalergénicos</strong>. El stand incluye banner, cartel y espejo hollywood.</p>
         <a href="/contacto" class="btn-chico">Consultar precio →</a>
@@ -191,6 +191,33 @@
     .foto-card img:hover {
         transform: scale(1.05);
     }
+@media (max-width: 768px) {
+    .seccion-full {
+        flex-direction: column !important;
+        height: auto;
+        margin: 0 -20px 40px -20px;
+        }
+        .seccion-full-img img {
+            height: 300px;
+            width: 100%;
+        }
+        .seccion-full-texto {
+            padding: 30px 25px;
+        }
+        .seccion-full-texto h3 {
+            font-size: 22px;
+        }
+        .hero h2 {
+            font-size: 24px;
+        }
+        .galeria {
+            grid-template-columns: repeat(2, 1fr);
+            gap: 10px;
+        }
+        .foto-card img {
+            height: 180px;
+        }
+}
 </style>
 
 {% endblock %}
