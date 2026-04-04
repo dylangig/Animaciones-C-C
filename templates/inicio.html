@@ -197,6 +197,10 @@
         height: auto;
         margin: 0 -20px 40px -20px;
         }
+    .seccion-full,
+        .seccion-full.invertida {
+            flex-direction: column !important;
+        }
         .seccion-full-img img {
             height: 300px;
             width: 100%;
@@ -211,11 +215,11 @@
             font-size: 24px;
         }
         .galeria {
-            grid-template-columns: repeat(2, 1fr);
-            gap: 10px;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 8px;
         }
         .foto-card img {
-            height: 180px;
+            height: 120px;
         }
 }
 </style>
