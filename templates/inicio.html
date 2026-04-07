@@ -12,13 +12,15 @@
 <!-- Stand de Glitter -->
     <div class="seccion-full" data-aos="fade-up">
     <div class="seccion-full-img">
-        <img src="{{ url_for('static', filename='imagenes/Glitter3.webp') }}" />
+        <a href="{{ url_for('static', filename='imagenes/Glitter1.webp') }}" class="glightbox">
+    <img src="{{ url_for('static', filename='imagenes/Glitter1.webp') }}" />
+    </a>
     </div>
     <div class="seccion-full-texto">
         <h3>Stand de Glitter y Maquillaje artistico</h3>
         <p>Ofrecemos una experiencia completa de brillo y color con glitter en polvo o gel, gemas, strass, piedras y polvo de hadas. Incluye maquillaje artístico para niños y adultos, tatuajes personalizados y pelos locos.</p>
-        <p>Todos nuestros productos son <strong>hipoalergénicos</strong>. El stand incluye banner, cartel y espejo hollywood.</p>
-        <a href="/contacto" class="btn-chico">Consultar precio →</a>
+        <p>Todos nuestros productos son hipoalergénicos. El stand incluye banner, cartel y espejo hollywood.</p>
+        <a href="/contacto" class="btn-chico">Consultar disponibilidad →</a>
     </div>
 </div>
 </section>
@@ -26,12 +28,14 @@
 <!-- Animación -->
 <div class="seccion-full invertida" data-aos="fade-up">
     <div class="seccion-full-img">
-        <img src="{{ url_for('static', filename='imagenes/Animacion2.webp') }}" />
+        <a href="{{ url_for('static', filename='imagenes/Animacion1.webp') }}" class="glightbox">
+    <img src="{{ url_for('static', filename='imagenes/Animacion1.webp') }}" />
+    </a>
     </div>
     <div class="seccion-full-texto">
         <h3>Animación Infantil</h3>
         <p>Juegos de destreza, habilidad y competencia acorde a la edad del grupo. Incluye maquillaje artístico, glitter y máquina de burbujas.</p>
-        <p>También te ayudamos a organizar el momento de la torta y piñata. <strong>¡Llevamos disfraz de panchero!</strong></p>
+        <p>También te ayudamos a organizar el momento de la torta y piñata. ¡Llevamos disfraz de panchero!</p>
         <a href="/contacto" class="btn-chico">Consultar precio →</a>
     </div>
 </div>
@@ -40,7 +44,9 @@
 <!--  Fotografía -->
 <div class="seccion-full" data-aos="fade-up">
     <div class="seccion-full-img">
-        <img src="{{ url_for('static', filename='imagenes/fotografia2.webp') }}" />
+        <a href="{{ url_for('static', filename='imagenes/fotografia1.webp') }}" class="glightbox">
+    <img src="{{ url_for('static', filename='imagenes/fotografia1.webp') }}" />
+    </a>
     </div>
     <div class="seccion-full-texto">
         <h3>Fotografía Profesional</h3>
@@ -52,14 +58,16 @@
 
 <!-- Galería -->
 <section class="galeria-seccion" data-aos="fade-up">
-    <h3>📷 Nuestros trabajos</h3>
+    <h3>Nuestros trabajos</h3>
     <div class="galeria">
-        {% for foto in fotos %}
-            <div class="foto-card">
+    {% for foto in fotos %}
+        <div class="foto-card">
+            <a href="{{ url_for('static', filename='imagenes/' + foto) }}" class="glightbox">
                 <img src="{{ url_for('static', filename='imagenes/' + foto) }}" />
-            </div>
-        {% endfor %}
-    </div>
+            </a>
+        </div>
+    {% endfor %}
+</div>
 </section>
 
 <style>
